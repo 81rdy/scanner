@@ -4,7 +4,6 @@ import socket
 import colorama
 from colorama import Fore
 ip = input('insert IP/domain name: ')
-#"109.196.55.58"
 print('Hey, hey calm down! Its a lazy scanner he needs some time to do streaches and such to start working.\n\nGo make yourself cup of coffee or tea.\n')
 def longscan(ip):    
     for port in range(6,1000):
