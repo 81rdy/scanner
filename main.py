@@ -1,7 +1,5 @@
 #/bin/python3
-#import os ???
 import socket
-import colorama
 from colorama import Fore
 ip = input('insert IP/domain name: ')
 print('Hey, hey calm down! Its a lazy scanner he needs some time to do streaches and such to start working.\n\nGo make yourself cup of coffee or tea.\n')
