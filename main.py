@@ -1,5 +1,8 @@
 #/bin/python3
+
+=======
 #import os ???
+
 import socket
 from colorama import Fore
 
@@ -35,23 +38,23 @@ def fullscan(ip):
 
 
 def custom_range(ip):   
-    try:
         print(Fore.GREEN+'->CUSTOM RANGE!<-')
         start = input('input starting port number: ')
         finish = input('input ending port value: ')
         print('\n')   
         #Secure casting from string to int ValueError
-        for port in range(int(start),int(finish)):
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            socket.setdefaulttimeout(1)
-            result = sock.connect_ex((ip,port))
-            if result == 0: 
-                print (Fore.RED+f'!!!~Port {port} is open~!!!')
-            #else: 
-                #print (Fore.WHITE+f'Port {port} is closed')
-            sock.close()
-    except:
-        print(Fore.RED+"ENTER A PROPER VALUE >:(")
+        try:
+            for port in range(int(start),int(finish)):
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                socket.setdefaulttimeos ut(1)
+                result = sock.connect_ex((ip,port))
+                if result == 0: 
+                    print (Fore.RED+f'!!!~Port {port} is open~!!!')
+                #else: 
+                    #print (Fore.WHITE+f'Port {port} is closed')
+              sock.close()
+        except ValueError:
+            print(Fore.RED+"ENTER A PROPER VALUE >:(")
 
 def most_popular(ip):
     print(Fore.GREEN+'->MOST POPULAR!<-')   
@@ -90,4 +93,3 @@ while True:
     mode = input(Fore.YELLOW+'pick scanner mode 1-4\n\t>1.fullscan\n\t>2.custom range\n\t>3.most popular\n\t>4.custom list\n======>')
     choice(mode)
     print(Fore.RED+f'DONE!\n\n')
-    
