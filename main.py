@@ -52,7 +52,7 @@ def custom_range(ip):
                     print (Fore.RED+f'!!!~Port {port} is open~!!!')
                 #else: 
                     #print (Fore.WHITE+f'Port {port} is closed')
-              sock.close()
+                sock.close()
         except ValueError:
             print(Fore.RED+"ENTER A PROPER VALUE >:(")
 
