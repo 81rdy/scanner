@@ -46,7 +46,7 @@ def custom_range(ip):
         try:
             for port in range(int(start),int(finish)):
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                socket.setdefaulttimeos ut(1)
+                socket.setdefaulttimeout(1)
                 result = sock.connect_ex((ip,port))
                 if result == 0: 
                     print (Fore.RED+f'!!!~Port {port} is open~!!!')
